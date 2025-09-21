@@ -2,220 +2,185 @@ import React, { useState, useEffect } from "react";
 
 const E1Schedule = {
   "10:30 AM\n—\n11:30 AM": {
-    Friday: { text: "SE LAB 4", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Monday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Thursday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
   },
   "11:30 AM\n—\n12:30 PM": {
-    Monday: { text: "PD", bg: "from-pink-600 via-pink-500 to-pink-400" },
-    Tuesday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
-    Wednesday: { text: "PD", bg: "from-pink-600 via-pink-500 to-pink-400" },
+    Monday: { text: "CG", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Tuesday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Wednesday: {
+      text: "OS",
+      bg: "from-purple-600 via-purple-500 to-purple-400",
+    },
     Thursday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
+      text: "OS",
+      bg: "from-purple-600 via-purple-500 to-purple-400",
     },
-    Friday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
-    },
-    Saturday: {
-      text: "SE",
-      bg: "from-indigo-600 via-indigo-500 to-indigo-400",
-    },
+    Friday: { text: "OS", bg: "from-purple-600 via-purple-500 to-purple-400" },
   },
   "12:30 PM\n—\n01:30 PM": {
-    Monday: {
-      text: ["DS 514", "AI LAB 3"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
-    Tuesday: {
-      text: ["DS LAB 4", "AI 515"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
-    Wednesday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
-    },
-    Thursday: {
-      text: ["DS LAB 4", "AI 515"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
-    Friday: {
-      text: ["DS 514", "AI 515"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
-    Saturday: {
-      text: ["DS 514", "AI LAB 3"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
+    Monday: { text: "OS", bg: "from-purple-600 via-purple-500 to-purple-400" },
+    Tuesday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Wednesday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Thursday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Friday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
   },
   "01:30 PM\n—\n02:30 PM": {
-    Monday: { text: "SE", bg: "from-indigo-600 via-indigo-500 to-indigo-400" },
-    Tuesday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
-    },
+    Monday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
+    Tuesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
     Wednesday: {
-      text: "DM",
-      bg: "from-purple-600 via-purple-500 to-purple-400",
+      text: "CG Lab 4",
+      bg: "from-green-700 via-green-600 to-green-500",
     },
     Thursday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
     Friday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Saturday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
-    },
   },
   "02:30 PM\n—\n03:30 PM": {
-    Monday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Tuesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
+    Monday: {
+      text: "CG Lab 4",
+      bg: "from-green-700 via-green-600 to-green-500",
+    },
+    Tuesday: {
+      text: "CG Lab 4",
+      bg: "from-green-700 via-green-600 to-green-500",
+    },
     Wednesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
     Thursday: {
-      text: "SE LAB 4",
-      bg: "from-blue-600 via-blue-500 to-blue-400",
+      text: "CG Lab 4",
+      bg: "from-green-700 via-green-600 to-green-500",
     },
-    Friday: { text: "DM", bg: "from-purple-600 via-purple-500 to-purple-400" },
-    Saturday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
+    Friday: {
+      text: "ML Lab 4",
+      bg: "from-orange-600 via-orange-500 to-orange-400",
+    },
   },
   "03:30 PM\n—\n04:30 PM": {
-    Monday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
-    Tuesday: { text: "DM", bg: "from-purple-600 via-purple-500 to-purple-400" },
+    Monday: { text: "ML", bg: "from-orange-600 via-orange-500 to-orange-400" },
+    Tuesday: {
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
+    },
     Wednesday: {
-      text: "SE",
-      bg: "from-indigo-600 via-indigo-500 to-indigo-400",
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
     },
     Thursday: {
-      text: "DM",
-      bg: "from-purple-600 via-purple-500 to-purple-400",
+      text: "ML",
+      bg: "from-orange-600 via-orange-500 to-orange-400",
     },
-    Friday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
-    Saturday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
+    Friday: {
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
+    },
   },
   "04:30 PM\n—\n05:30 PM": {
     Monday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
+      text: "ML Lab 4",
+      bg: "from-orange-600 via-orange-500 to-orange-400",
     },
-    Tuesday: { text: "SE LAB 4", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Tuesday: { text: "", bg: "from-gray-800 to-gray-700" },
     Wednesday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
+      text: "ML",
+      bg: "from-orange-600 via-orange-500 to-orange-400",
     },
     Thursday: {
-      text: "SE",
-      bg: "from-indigo-600 via-indigo-500 to-indigo-400",
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
     },
-    Friday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
-    },
-    Saturday: {
-      text: "SE LAB 4",
-      bg: "from-blue-600 via-blue-500 to-blue-400",
-    },
+    Friday: { text: "ML", bg: "from-orange-600 via-orange-500 to-orange-400" },
   },
 };
 
 const E2Schedule = {
   "10:30 AM\n—\n11:30 AM": {
-    Monday: { text: "SE", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Monday: { text: ["OS", ""], bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Wednesday: {
+      text: ["OS", "311"],
+      bg: "from-blue-600 via-blue-500 to-blue-400",
+    },
+    Thursday: {
+      text: ["CC", "Lab 4"],
+      bg: "from-green-600 via-green-500 to-green-400",
+    },
   },
   "11:30 AM\n—\n12:30 PM": {
-    Monday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
-    Tuesday: { text: "SE", bg: "from-blue-600 via-blue-500 to-blue-400" },
-    Wednesday: { text: "SE", bg: "from-blue-600 via-blue-500 to-blue-400" },
-    Thursday: { text: "SE", bg: "from-blue-600 via-blue-500 to-blue-400" },
-    Friday: { text: "PD", bg: "from-pink-600 via-pink-500 to-pink-400" },
-    Saturday: {
-      text: "DM",
-      bg: "from-purple-600 via-purple-500 to-purple-400",
-    },
-  },
-  "12:30 PM\n—\n1:30 PM": {
     Monday: {
-      text: ["IDS 514", "AI Lab 3"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
+      text: ["CG", "Lab 4"],
+      bg: "from-blue-600 via-blue-500 to-blue-400",
     },
-    Tuesday: {
-      text: ["IDS Lab 4", "AI 515"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
+    Tuesday: { text: "OS", bg: "from-blue-600 via-blue-500 to-blue-400" },
     Wednesday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
-    },
-    Thursday: {
-      text: ["IDS Lab 4", "AI 515"],
+      text: ["ML", "Lab 4"],
       bg: "from-orange-600 via-orange-500 to-orange-400",
     },
+    Thursday: { text: "OS", bg: "from-blue-600 via-blue-500 to-blue-400" },
     Friday: {
-      text: ["IDS 514", "AI 515"],
-      bg: "from-orange-600 via-orange-500 to-orange-400",
-    },
-    Saturday: {
-      text: ["IDS 514", "AI Lab 3"],
+      text: ["ML", "Lab 4"],
       bg: "from-orange-600 via-orange-500 to-orange-400",
     },
   },
-  "1:30 PM\n—\n2:30 PM": {
+  "12:30 PM\n—\n01:30 PM": {
     Monday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Tuesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Wednesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Thursday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Friday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-    Saturday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
-  },
-  "2:30 PM\n—\n3:30 PM": {
-    Monday: { text: "DM", bg: "from-purple-600 via-purple-500 to-purple-400" },
-    Tuesday: { text: "DM", bg: "from-purple-600 via-purple-500 to-purple-400" },
-    Wednesday: { text: "PD", bg: "from-pink-600 via-pink-500 to-pink-400" },
-    Thursday: {
-      text: "DM",
-      bg: "from-purple-600 via-purple-500 to-purple-400",
-    },
-    Friday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
-    },
-    Saturday: {
-      text: "SE Lab 4",
-      bg: "from-blue-600 via-blue-500 to-blue-400",
-    },
-  },
-  "3:30 PM\n—\n4:30 PM": {
-    Monday: { text: "SE Lab 4", bg: "from-blue-600 via-blue-500 to-blue-400" },
     Tuesday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
+      text: ["CG", "511"],
+      bg: "from-green-600 via-green-500 to-green-400",
     },
     Wednesday: {
-      text: "SE Lab 4",
-      bg: "from-blue-600 via-blue-500 to-blue-400",
+      text: ["ML", "314"],
+      bg: "from-orange-600 via-orange-500 to-orange-400",
     },
-    Thursday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
-    },
-    Friday: { text: "SE Lab 4", bg: "from-blue-600 via-blue-500 to-blue-400" },
-    Saturday: {
-      text: "Java Lab 4",
-      bg: "from-yellow-700 via-yellow-600 to-yellow-500",
+    Thursday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Friday: {
+      text: ["ML", "511"],
+      bg: "from-orange-600 via-orange-500 to-orange-400",
     },
   },
-  "4:30 PM\n—\n5:30 PM": {
-    Monday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
+  "01:30 PM\n—\n02:30 PM": {
+    Monday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Tuesday: { text: "ML", bg: "from-orange-600 via-orange-500 to-orange-400" },
+    Wednesday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Thursday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Friday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+  },
+  "02:30 PM\n—\n03:30 PM": {
+    Monday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Tuesday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Wednesday: {
+      text: ["Linux", "Lab 4"],
+      bg: "from-purple-600 via-purple-500 to-purple-400",
     },
-    Tuesday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
-    Wednesday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
     Thursday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
+      text: "ML",
+      bg: "from-orange-600 via-orange-500 to-orange-400",
+    },
+    Friday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+  },
+  "03:30 PM\n—\n04:30 PM": {
+    Monday: {
+      text: ["Linux", "Lab 4"],
+      bg: "from-purple-600 via-purple-500 to-purple-400",
+    },
+    Tuesday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Wednesday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Thursday: {
+      text: ["Linux", "Lab 4"],
+      bg: "from-purple-600 via-purple-500 to-purple-400",
+    },
+    Friday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+  },
+  "04:30 PM\n—\n05:30 PM": {
+    Tuesday: {
+      text: ["Linux", "Lab 4"],
+      bg: "from-purple-600 via-purple-500 to-purple-400",
+    },
+    Wednesday: {
+      text: ["CG", "Lab 4"],
+      bg: "from-green-600 via-green-500 to-green-400",
     },
     Friday: {
-      text: "Java",
-      bg: "from-yellow-600 via-yellow-500 to-yellow-400",
+      text: ["CG", "Lab 4"],
+      bg: "from-green-600 via-green-500 to-green-400",
     },
-    Saturday: { text: "ED", bg: "from-green-600 via-green-500 to-green-400" },
   },
 };
 
@@ -225,14 +190,7 @@ export default function Timetable() {
 
   const schedule = isE2 ? E2Schedule : E1Schedule;
   const timeSlots = Object.keys(schedule);
-  const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
   const handleSwitch = () => {
     setFadeOut(true);
@@ -247,11 +205,11 @@ export default function Timetable() {
       <div className="container mx-auto bg-gray-900 rounded-2xl p-6 shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-gray-800">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-            Class Schedule {isE2 ? "E2" : "E1"}
+            {isE2 ? "Class Schedule E2" : "Class Schedule E1"}
           </h1>
           <button
             onClick={handleSwitch}
-            className="relative px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out hover:scale-105 active:scale-95"
+            className="relative px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-out hover:scale-105 active:scale-95 cursor-pointer"
           >
             <span className="relative z-10">
               Switch to {isE2 ? "E1" : "E2"}
@@ -260,7 +218,7 @@ export default function Timetable() {
           </button>
         </div>
         <div
-          className={`grid grid-cols-7 gap-3 rounded-xl overflow-hidden transition-opacity duration-300 ${
+          className={`grid grid-cols-6 gap-3 rounded-xl overflow-hidden transition-opacity duration-300 ${
             fadeOut ? "opacity-0" : "opacity-100"
           }`}
         >
@@ -275,6 +233,9 @@ export default function Timetable() {
               className="p-4 font-bold text-white text-center bg-gray-800 rounded-lg text-2xl shadow-inner flex items-center justify-center h-24"
             >
               {day}
+              {isE2 && day === "Monday" && (
+                <div className="text-xs mt-1 text-gray-300"></div>
+              )}
             </div>
           ))}
 
