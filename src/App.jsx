@@ -93,9 +93,9 @@ const E1Schedule = {
 
 const E2Schedule = {
   "10:30 AM\n—\n11:30 AM": {
-    Monday: { text: ["OS", ""], bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Monday: { text: "OS", bg: "from-purple-600 via-purple-500 to-purple-400" },
     Wednesday: {
-      text: ["OS", "311"],
+      text: "OS",
       bg: "from-blue-600 via-blue-500 to-blue-400",
     },
     Thursday: {
@@ -108,12 +108,15 @@ const E2Schedule = {
       text: ["CG", "Lab 4"],
       bg: "from-blue-600 via-blue-500 to-blue-400",
     },
-    Tuesday: { text: "OS", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Tuesday: { text: "OS", bg: "from-purple-600 via-purple-500 to-purple-400" },
     Wednesday: {
       text: ["ML", "Lab 4"],
       bg: "from-orange-600 via-orange-500 to-orange-400",
     },
-    Thursday: { text: "OS", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Thursday: {
+      text: "OS",
+      bg: "from-purple-600 via-purple-500 to-purple-400",
+    },
     Friday: {
       text: ["ML", "Lab 4"],
       bg: "from-orange-600 via-orange-500 to-orange-400",
@@ -136,7 +139,7 @@ const E2Schedule = {
     },
   },
   "01:30 PM\n—\n02:30 PM": {
-    Monday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Monday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
     Tuesday: { text: "ML", bg: "from-orange-600 via-orange-500 to-orange-400" },
     Wednesday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
     Thursday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
@@ -146,8 +149,8 @@ const E2Schedule = {
     Monday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
     Tuesday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
     Wednesday: {
-      text: ["Linux", "Lab 4"],
-      bg: "from-purple-600 via-purple-500 to-purple-400",
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
     },
     Thursday: {
       text: "ML",
@@ -157,21 +160,21 @@ const E2Schedule = {
   },
   "03:30 PM\n—\n04:30 PM": {
     Monday: {
-      text: ["Linux", "Lab 4"],
-      bg: "from-purple-600 via-purple-500 to-purple-400",
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
     },
-    Tuesday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
-    Wednesday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Tuesday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Wednesday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
     Thursday: {
-      text: ["Linux", "Lab 4"],
-      bg: "from-purple-600 via-purple-500 to-purple-400",
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
     },
-    Friday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Friday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
   },
   "04:30 PM\n—\n05:30 PM": {
     Tuesday: {
-      text: ["Linux", "Lab 4"],
-      bg: "from-purple-600 via-purple-500 to-purple-400",
+      text: "Linux Lab 4",
+      bg: "from-blue-700 via-blue-600 to-blue-500",
     },
     Wednesday: {
       text: ["CG", "Lab 4"],
