@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+// In E2Schedule, move "CG" from
 
 const E1Schedule = {
   "10:30 AM\n—\n11:30 AM": {
@@ -102,6 +104,7 @@ const E2Schedule = {
       text: ["CC", "Lab 4"],
       bg: "from-green-600 via-green-500 to-green-400",
     },
+    Friday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
   },
   "11:30 AM\n—\n12:30 PM": {
     Monday: {
@@ -132,7 +135,7 @@ const E2Schedule = {
       text: ["ML", "314"],
       bg: "from-orange-600 via-orange-500 to-orange-400",
     },
-    Thursday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Thursday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
     Friday: {
       text: ["ML", "511"],
       bg: "from-orange-600 via-orange-500 to-orange-400",
@@ -141,13 +144,13 @@ const E2Schedule = {
   "01:30 PM\n—\n02:30 PM": {
     Monday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
     Tuesday: { text: "ML", bg: "from-orange-600 via-orange-500 to-orange-400" },
-    Wednesday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Wednesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
     Thursday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
-    Friday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Friday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
   },
   "02:30 PM\n—\n03:30 PM": {
     Monday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
-    Tuesday: { text: "BREAK", bg: "from-gray-500 via-gray-400 to-gray-300" },
+    Tuesday: { text: "BREAK", bg: "from-red-500 via-red-400 to-red-300" },
     Wednesday: {
       text: "Linux Lab 4",
       bg: "from-blue-700 via-blue-600 to-blue-500",
@@ -156,7 +159,7 @@ const E2Schedule = {
       text: "ML",
       bg: "from-orange-600 via-orange-500 to-orange-400",
     },
-    Friday: { text: "CG", bg: "from-green-600 via-green-500 to-green-400" },
+    Friday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
   },
   "03:30 PM\n—\n04:30 PM": {
     Monday: {
@@ -169,7 +172,10 @@ const E2Schedule = {
       text: "Linux Lab 4",
       bg: "from-blue-700 via-blue-600 to-blue-500",
     },
-    Friday: { text: "CC", bg: "from-blue-600 via-blue-500 to-blue-400" },
+    Friday: {
+      text: ["CG", "Lab 4"],
+      bg: "from-green-600 via-green-500 to-green-400",
+    },
   },
   "04:30 PM\n—\n05:30 PM": {
     Tuesday: {
@@ -180,10 +186,7 @@ const E2Schedule = {
       text: ["CG", "Lab 4"],
       bg: "from-green-600 via-green-500 to-green-400",
     },
-    Friday: {
-      text: ["CG", "Lab 4"],
-      bg: "from-green-600 via-green-500 to-green-400",
-    },
+    Friday: { text: "", bg: "from-gray-800 to-gray-700" },
   },
 };
 
